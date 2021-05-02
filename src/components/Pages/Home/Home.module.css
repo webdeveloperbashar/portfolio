@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,700;0,900;1,400;1,500&display=swap");
+
+/* font-family: 'Raleway', sans-serif; */
+:root {
+  --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8ff;
+  --outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
+  --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
+  --first-color: #99cc00;
+  --second-color: #2f3640;
+  --third-color: #fdfdfd;
+}
+
+/*****dark theme color********/
+body.dark {
+  --outer-shadow: 3px 3px 3px #505d6e, -3px -3px 3px #505d6e;
+  --outer-shadow-0: 0 0 0 #2f3640, 0 0 0 #353b48;
+  --inner-shadow: inset 3px 3px 3px #2f3640, inset -3px -3px 3px #353b48;
+  --first-color: #fdfdfd;
+  --second-color: #99cc00;
+  --third-color: #2f3640;
+  background-color: #2f3640;
+}
+
+html {
+  overflow: hidden;
+}
+/*****effect animation****/
+.effect1 {
+  width: 45px;
+  height: 45px;
+  border: 5px solid #99cc00;
+  position: absolute;
+  right: 60px;
+  bottom: 40px;
+  z-index: 999;
+  animation: round 2s infinite;
+  -webkit-animation: round 5s linear infinite;
+}
+@keyframes round {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.effect2 {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border: 15px solid #e1b21d;
+  border-radius: 50%;
+  top: -64px;
+  left: 50%;
+  z-index: 999;
+  animation: upDown 3s ease-in-out infinite;
+}
+@keyframes upDown {
+  0%,
+  100% {
+    transform: translateX(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateX(20px);
+  }
+}
+.effect3 {
+  width: 20px;
+  height: 20px;
+  background-color: #12ddb2;
+  position: absolute;
+  border-radius: 50%;
+  top: 40%;
+  left: 40%;
+  z-index: 999;
+  animation: expand 7s ease-in-out infinite;
+}
+@keyframes expand {
+  0%,
+  100% {
+    width: 0px;
+    height: 0px;
+  }
+  50% {
+    width: 100px;
+    height: 100px;
+    opacity: 0.2;
+  }
+}
+.animationSquare {
+  position: absolute;
+  pointer-events: none;
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(0) translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: scale(0.5) translateY(1000%) rotate(360deg);
+  }
+}
+
+/*******/
+.homeDescription {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+  min-height: 92vh;
+  position: relative;
+}
+.description,
+.homeImage {
+  max-width: 50%;
+  flex: 0 0 50%;
+}
+.description h2 {
+  font-size: 50px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--second-color);
+}
+.description p {
+  color: var(--second-color);
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.description button {
+  font-size: 20px;
+  font-family: "Raleway", sans-serif;
+  background-color: var(--third-color);
+  font-weight: 600;
+  box-shadow: var(--outer-shadow);
+  border-radius: 20px;
+  border: 5px solid var(--first-color);
+  padding: 3px 20px;
+  text-transform: capitalize;
+  transition: all 0.5s ease;
+}
+.description button:hover {
+  background-color: var(--first-color);
+}
+.description button a {
+  color: var(--second-color) !important;
+  transition: all 0.5s ease;
+}
+.description button:hover a {
+  color: var(--third-color) !important;
+}
+.homeImage .img {
+  width: 300px;
+  height: 300px;
+  box-shadow: var(--inner-shadow);
+  display: block;
+  border-radius: 50%;
+  margin: auto;
+  padding: 15px;
+  animation: imgBounce 3s ease-in-out infinite;
+}
+@keyframes imgBounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+.homeImage .img img {
+  width: 100%;
+  height: 100%;
+  box-shadow: var(--outer-shadow);
+  border-radius: 50%;
+  border: 10px solid transparent;
+}
+.socialLink {
+  margin: 40px 0px;
+}
+.socialLink span a {
+  box-shadow: var(--outer-shadow);
+  color: var(--first-color);
+  padding: 5px 10px;
+  border-radius: 50%;
+  margin-right: 15px;
+  font-size: 25px;
+  text-align: center;
+  vertical-align: middle;
+}
+.socialLink span a:hover {
+  background-color: var(--first-color);
+  color: var(--third-color);
+}
+svg {
+  vertical-align: top !important;
+}

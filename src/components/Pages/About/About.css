@@ -1,0 +1,288 @@
+.about-me {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-me .center-box {
+  padding: 90px 0;
+}
+
+.about-me .background-shape {
+  /* background-image: url(../images/icons/shape2.svg); */
+  background-position: left top;
+}
+
+.about-me .sec-title {
+  margin-bottom: 70px;
+}
+
+.about-me .image-column .image-box {
+  position: relative;
+}
+
+.about-me .image-column .image {
+  position: relative;
+  margin-bottom: 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.about-me .image-column .background-layer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.about-me .image-column .background-layer:before {
+  position: absolute;
+  left: -20%;
+  bottom: 0;
+  width: 140%;
+  border-radius: 50%;
+  height: 460px;
+  content: "";
+  z-index: -1;
+  background-color: #7c06e4;
+}
+
+.about-me .image-column .background-layer:after {
+  position: absolute;
+  left: -20%;
+  bottom: 0;
+  width: 140%;
+  border-radius: 50%;
+  height: 460px;
+  content: "";
+  z-index: -1;
+  z-index: 1;
+  border-bottom: 8px solid #000000;
+}
+
+.about-me .image-column .image-box .icon {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.about-me .image-column .bg-shape {
+  z-index: -1;
+  top: auto !important;
+  bottom: 0;
+}
+
+.about-me .image-column .girl-img {
+  right: 0 !important;
+  margin: 0 auto;
+}
+
+.self-icon-1 {
+  left: -20px;
+  top: 70px;
+  height: 60px;
+  width: 66px;
+  /* background-image: url(../images/icons/self-icon-1.svg); */
+}
+
+.self-icon-2 {
+  right: 70px;
+  top: -20px;
+  width: 67px;
+  height: 64px;
+  /* background-image: url(../images/icons/self-icon-2.png); */
+}
+
+.self-icon-3 {
+  right: 20px;
+  top: 130px;
+  width: 46px;
+  height: 46px;
+  /* background-image: url(../images/icons/self-icon-3.svg); */
+}
+
+.about-me .content-column .inner-column {
+  position: relative;
+  padding-top: 40px;
+}
+
+.about-me .text-box {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.about-me .text-box h4 {
+  font-size: 32px;
+  line-height: 36px;
+  color: #1a191d;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.about-me .text-box p {
+  font-size: 18px;
+  line-height: 26px;
+  color: #443866;
+  margin-bottom: 45px;
+}
+
+.about-me .progress-bars {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+/*==========================
+	Progress Bars
+==========================*/
+
+.bar-item {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.bar-item .skill-bar {
+  position: relative;
+  width: 100%;
+  height: 5px;
+}
+
+.bar-item .skill-bar .bar-inner {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  background: #e1e0e7;
+}
+
+.bar-item .skill-bar .bar-inner .bar {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 1px;
+  width: 0px;
+  border-bottom: 5px solid #1a191d;
+  -webkit-transition: all 2000ms ease;
+  -ms-transition: all 2000ms ease;
+  -o-transition: all 2000ms ease;
+  -moz-transition: all 2000ms ease;
+  transition: all 2000ms ease;
+}
+
+.bar-item .skill-header {
+  position: relative;
+  line-height: 26px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 9px;
+  color: #7c06e4;
+  text-transform: capitalize;
+}
+
+.bar-item .skill-header .skill-title {
+  position: relative;
+}
+
+.bar-item .skill-percentage {
+  position: absolute;
+  right: -15px;
+  top: 0;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #1a191d;
+  width: 38px;
+  height: 18px;
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.09);
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  justify-content: center;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.bar-item:hover .skill-percentage {
+  top: -35px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.bar-item .skill-percentage:before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  border-left: 19px solid transparent;
+  border-right: 19px solid transparent;
+  border-top: 5px solid #ffffff;
+  content: "";
+}
+
+.bar-item .skill-percentage .count-box {
+  position: relative;
+  display: flex;
+}
+
+/*==========================
+	Fact Counter
+==========================*/
+
+.fact-counter {
+  position: relative;
+}
+
+.fact-counter .counter-column {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.fact-counter .count-box {
+  position: relative;
+  padding-left: 50px;
+}
+
+.fact-counter .count-box .icon {
+  position: absolute;
+  left: 0;
+  top: 0px;
+  font-size: 42px;
+  line-height: 1em;
+  color: #000000;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.fact-counter .count-box .counter-title {
+  position: relative;
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #443866;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.fact-counter .count-box .count-text {
+  position: relative;
+  display: block;
+  font-size: 30px;
+  line-height: 1em;
+  color: #7c06e4;
+  font-weight: 700;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}

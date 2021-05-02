@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,700;0,900;1,400;1,500&display=swap");
+
+/* font-family: 'Raleway', sans-serif; */
+:root {
+  --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8ff;
+  --outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
+  --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
+  --first-color: #99cc00;
+  --second-color: #2f3640;
+  --third-color: #fdfdfd;
+  --fourth-color: #2f3640;
+}
+
+/*****dark theme color********/
+.dark {
+  --outer-shadow: 3px 3px 3px #2f3640, -3px -3px 3px #353b48;
+  --outer-shadow-0: 0 0 0 #2f3640, 0 0 0 #353b48;
+  --inner-shadow: inset 3px 3px 3px #2f3640, inset -3px -3px 3px #353b48;
+  --first-color: #fdfdfd;
+  --second-color: #fdfdfd;
+  --third-color: #2f3640;
+  --fourth-color: #99cc00;
+  background-color: #2f3640;
+}
+
+/***Globally css**/
+a {
+  color: var(--fourth-color);
+}
+a:hover {
+  text-decoration: none;
+  color: var(--second-color);
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+/*****/
+.header {
+  padding: 5px 0;
+}
+.header-right {
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 1px;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 700;
+  border: 5px solid var(--first-color);
+}
+.header-right span {
+  font-size: 15px;
+}
+.sidebar-menu {
+  width: 250px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--third-color);
+  position: fixed;
+  top: 0;
+  transform: translateX(-260px);
+  transition: 0.5s;
+  z-index: 999;
+  box-shadow: 0px 2px 10px black;
+}
+.sidebar-menu.active {
+  transform: translateX(0px);
+  transition: 0.5s;
+}
+.toggle-icon {
+  color: var(--second-color);
+}
+.toggle-icon,
+.hide-icon {
+  cursor: pointer;
+  color: var(--second-color);
+}
+
+nav {
+  width: 100%;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+}
+nav > strong > img {
+  width: 60px;
+  height: 60px !important;
+  margin-bottom: 5px;
+  border-radius: 50%;
+  border: 4px solid var(--first-color);
+}
+nav > strong > h5 {
+  font-family: "Raleway", sans-serif;
+  color: var(--second-color);
+  font-size: 25px;
+  font-weight: 600;
+}
+
+nav > li {
+  list-style: none;
+  display: flex;
+  justify-content: start;
+  margin: 25px 0;
+  padding: 5px 10px;
+  height: 36px;
+  border-radius: 5px;
+}
+nav > li:hover {
+  background: var(--first-color);
+}
+nav > li > a > span {
+  margin-right: 15px;
+  vertical-align: middle;
+}
+
+nav > li > a {
+  color: var(--second-color);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  width: 100%;
+  text-align: start;
+  text-decoration: none !important;
+  font-family: "Raleway", sans-serif;
+}
+nav > li > a:hover {
+  color: var(--third-color);
+}
+.hide-icon {
+  text-align: end;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  color: red;
+}
+
+.MuiButton-label > a {
+  font-family: "Raleway", sans-serif;
+  color: white;
+}

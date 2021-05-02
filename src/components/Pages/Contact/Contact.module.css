@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,700;0,900;1,400;1,500&display=swap");
+
+/* font-family: 'Raleway', sans-serif; */
+:root {
+  --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8ff;
+  --outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
+  --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
+  --first-color: #99cc00;
+  --second-color: #2f3640;
+  --third-color: #fdfdfd;
+  --fourth-color: #2f3640;
+}
+
+/*****dark theme color********/
+.dark {
+  --outer-shadow: 3px 3px 3px #2f3640, -3px -3px 3px #353b48;
+  --outer-shadow-0: 0 0 0 #2f3640, 0 0 0 #353b48;
+  --inner-shadow: inset 3px 3px 3px #2f3640, inset -3px -3px 3px #353b48;
+  --first-color: #fdfdfd;
+  --second-color: #fdfdfd;
+  --third-color: #2f3640;
+  --fourth-color: #99cc00;
+  background-color: #2f3640;
+}
+
+/******Contact form css*******/
+.form {
+  background: linear-gradient(45deg, #2f3640d2, #2f3640d2),
+    url(../../Image/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px;
+  border-radius: 10px;
+}
+.button{
+    background-color: #99cc00;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+::placeholder{
+  color: rgba(255, 255, 255, 0.637) !important;
+}
+input, textarea {
+    background: #7d7d7d9e !important;
+    border: none !important;
+    color: white !important;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px !important;
+}
