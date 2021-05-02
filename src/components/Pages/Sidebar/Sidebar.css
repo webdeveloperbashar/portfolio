@@ -1,35 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,700;0,900;1,400;1,500&display=swap");
-
-/* font-family: 'Raleway', sans-serif; */
-:root {
-  --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8ff;
-  --outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
-  --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
-  --first-color: #99cc00;
-  --second-color: #2f3640;
-  --third-color: #fdfdfd;
-  --fourth-color: #2f3640;
-}
-
-/*****dark theme color********/
-.dark {
-  --outer-shadow: 3px 3px 3px #2f3640, -3px -3px 3px #353b48;
-  --outer-shadow-0: 0 0 0 #2f3640, 0 0 0 #353b48;
-  --inner-shadow: inset 3px 3px 3px #2f3640, inset -3px -3px 3px #353b48;
-  --first-color: #fdfdfd;
-  --second-color: #fdfdfd;
-  --third-color: #2f3640;
-  --fourth-color: #99cc00;
-  background-color: #2f3640;
-}
-
 /***Globally css**/
 a {
-  color: var(--fourth-color);
+  color: var(--first-color);
 }
 a:hover {
   text-decoration: none;
-  color: var(--second-color);
+  color: var(--first-color);
 }
 ::-webkit-scrollbar {
   width: 0px;
@@ -48,7 +24,7 @@ a:hover {
   justify-content: center;
   border-radius: 50%;
   font-weight: 700;
-  border: 5px solid var(--first-color);
+  border: 5px solid var(--third-color);
 }
 .header-right span {
   font-size: 15px;
@@ -59,7 +35,8 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--third-color);
+  color: var(--first-color);
+  background: var(--second-color);
   position: fixed;
   top: 0;
   transform: translateX(-260px);
@@ -72,12 +49,12 @@ a:hover {
   transition: 0.5s;
 }
 .toggle-icon {
-  color: var(--second-color);
+  color: var(--first-color);
 }
 .toggle-icon,
 .hide-icon {
   cursor: pointer;
-  color: var(--second-color);
+  color: var(--third-color);
 }
 
 nav {
@@ -87,15 +64,15 @@ nav {
   font-weight: 600;
 }
 nav > strong > img {
-  width: 60px;
-  height: 60px !important;
+  width: 80px;
+  height: 80px !important;
   margin-bottom: 5px;
   border-radius: 50%;
-  border: 4px solid var(--first-color);
+  border: 4px solid var(--third-color);
 }
 nav > strong > h5 {
   font-family: "Raleway", sans-serif;
-  color: var(--second-color);
+  color: var(--third-color);
   font-size: 25px;
   font-weight: 600;
 }
@@ -109,19 +86,18 @@ nav > li {
   height: 36px;
   border-radius: 5px;
 }
-nav > li:hover {
-  background: var(--first-color);
-}
 nav > li > a > span {
   margin-right: 15px;
   vertical-align: middle;
 }
 
 nav > li > a {
-  color: var(--second-color);
+  color: var(--third-color);
   font-size: 18px;
   font-weight: 600;
   letter-spacing: 1px;
+  padding: 0 10px;
+  border-radius: 5px;
   width: 100%;
   text-align: start;
   text-decoration: none !important;
@@ -129,6 +105,7 @@ nav > li > a {
 }
 nav > li > a:hover {
   color: var(--third-color);
+  background: var(--first-color);
 }
 .hide-icon {
   text-align: end;

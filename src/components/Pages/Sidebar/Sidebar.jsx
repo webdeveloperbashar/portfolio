@@ -1,15 +1,14 @@
 // import { Nav } from "react-bootstrap";
-import { Switch } from "@material-ui/core";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useState } from "react";
 import { IoMdContact } from "react-icons/io";
 import { IoHome, IoSchool } from "react-icons/io5";
 import {
-  MdCreateNewFolder, MdFavorite,
+  MdFavorite,
   MdPermContactCalendar
 } from "react-icons/md";
 import { RiCloseLine, RiMenu3Fill } from "react-icons/ri";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Me from "../../Image/me.png";
 import "./Sidebar.css";
 
@@ -43,9 +42,9 @@ function Header() {
               </h2>
             </div>
             <div className="header-right" title='Web Developer Bashar'>
-              <Link to="/">
+              <NavLink to="/">
                 <span>WDB</span>
-              </Link>
+              </NavLink>
             </div>
           </header>
         </div>
@@ -69,54 +68,46 @@ function Header() {
               <h5>Abul Bashar</h5>
             </strong>
             <li>
-              <Link activeStyle={{background: 'red'}} to="/">
+              <NavLink exact activeStyle={{background: '#99cc00', color: 'white'}} to="/">
                 <span>
                   <IoHome />
                 </span>
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/about">
+              <NavLink activeStyle={{background: '#99cc00', color: 'white'}} to="/about">
                 <span>
                   <IoMdContact />
                 </span>
                 About
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/education">
+              <NavLink activeStyle={{background: '#99cc00', color: 'white'}} to="/project">
                 <span>
                   <IoSchool />
                 </span>
-                Education
-              </Link>
+                Project
+              </NavLink>
             </li>
             <li>
-              <Link to="/hobby">
+              <NavLink activeStyle={{background: '#99cc00', color: 'white'}} to="/portfolio">
                 <span>
                   <MdFavorite />
                 </span>
-                Hobby
-              </Link>
+                Portfolio
+              </NavLink>
             </li>
             <li>
-              <Link to="/contact">
+              <NavLink activeStyle={{background: '#99cc00', color: 'white'}} to="/contact">
                 <span>
                   <MdPermContactCalendar />
                 </span>
                 Contact
-              </Link>
+              </NavLink>
             </li>
-            <li>
-              <Link to="/">
-                <span>
-                  <MdCreateNewFolder />
-                </span>
-                Create Website
-              </Link>
-            </li>
-            <span className={`d-4 ${state.checkedA ? 'text-white' : 'text-dark'}`}>Light Mode</span>
+            {/* <span className={`d-4 ${state.checkedA ? 'text-white' : 'text-dark'}`}>Light Mode</span>
               <Switch
                 checked={state.checkedA}
                 onChange={handleChange}
@@ -125,7 +116,7 @@ function Header() {
               />
               {
                 state.checkedA ? document.body.classList = `${color}` : document.body.classList = 'light'
-              }
+              } */}
           </nav>
         </div>
       </div>

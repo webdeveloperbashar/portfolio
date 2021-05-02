@@ -1,20 +1,41 @@
-import React, { useState } from "react";
-import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 import { Button } from "@material-ui/core";
-import Sidebar from "./components/Pages/Sidebar/Sidebar";
-import Home from "./components/Pages/Home/Home";
+import React, { useState } from "react";
+import { FaMicrophone, FaMicrophoneSlash } from "react-icons/fa";
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
+import SpeechRecognition, {
+  useSpeechRecognition
+} from "react-speech-recognition";
 import About from "./components/Pages/About/About";
 import Contact from "./components/Pages/Contact/Contact";
-import Education from "./components/Pages/Education/Education";
-import Hobby from "./components/Pages/Hobby/Hobby";
 import Error from "./components/Pages/Error/Error";
-import SpeechRecognition, {
-  useSpeechRecognition,
-} from "react-speech-recognition";
-import { FaMicrophone, FaMicrophoneSlash } from "react-icons/fa";
+import Home from "./components/Pages/Home/Home";
+import classes from "./components/Pages/Home/Home.module.css";
 // import { WiMoonWaningCrescent2 } from "react-icons/wi";
+import Project from './components/Pages/Project/Project';
+import Sidebar from "./components/Pages/Sidebar/Sidebar";
 
 const App = () => {
+  const colors = ["#FDA7DF", "#12ddb2;", "#ED4C67", "#FFC312"];
+  const createAnimation = () => {
+    const body = document.querySelector("body");
+    const square = document.createElement("span");
+    square.className = `${classes.animationSquare}`;
+    const size = Math.random() * 60;
+    square.style.width = 20 + size + "px";
+    square.style.height = 20 + size + "px";
+
+    square.style.bottom = Math.random() * window.innerHeight + "px";
+    square.style.left = Math.random() * window.innerWidth + "px";
+
+    const bg = colors[Math.floor(Math.random() * colors.length)];
+
+    square.style.background = bg;
+    body.appendChild(square);
+    setTimeout(() => {
+      square.remove();
+    }, 5000);
+  };
+  setInterval(createAnimation, 1000);
   const [mic, setMic] = useState(false);
   const showHideMic = () => setMic(!mic);
   const commands = [
@@ -25,12 +46,12 @@ const App = () => {
   ];
   useSpeechRecognition({ commands });
   const [url, setUrl] = useState("");
-  const pages = ["home", "about", "education", "hobby", "contact"];
+  const pages = ["home", "about", "projct", "portfolio", "contact"];
   const urls = {
     home: "/",
     about: "/about",
-    education: "/education",
-    hobby: "/hobby",
+    project: "/project",
+    portfolio: "/portfolio",
     contact: "/contact",
   };
   let output = "";
@@ -73,11 +94,8 @@ const App = () => {
         <Route path="/about">
           <About />
         </Route>
-        <Route path="/education">
-          <Education />
-        </Route>
-        <Route path="/hobby">
-          <Hobby />
+        <Route path="/project">
+          <Project/>
         </Route>
         <Route path="/contact">
           <Contact />

@@ -11,27 +11,6 @@ import Me from "../../Image/me.png";
 import classes from "./Home.module.css";
 
 const Home = () => {
-  const colors = ["#FDA7DF", "#12ddb2;", "#ED4C67", "#FFC312"];
-  const createAnimation = () => {
-    const body = document.querySelector("body");
-    const square = document.createElement("span");
-    square.className = `${classes.animationSquare}`;
-    const size = Math.random() * 60;
-    square.style.width = 20 + size + "px";
-    square.style.height = 20 + size + "px";
-
-    square.style.bottom = Math.random() * window.innerHeight + "px";
-    square.style.left = Math.random() * window.innerWidth + "px";
-
-    const bg = colors[Math.floor(Math.random() * colors.length)];
-
-    square.style.background = bg;
-    body.appendChild(square);
-    setTimeout(() => {
-      square.remove();
-    }, 5000);
-  };
-  setInterval(createAnimation, 1000);
   return (
     <section>
       <div className={classes.homeSection}>
@@ -47,8 +26,8 @@ const Home = () => {
                 <div className={classes.description}>
                   <h2>I'm abul bashar</h2>
                   <p>
-                    now, I am learning many things, exploring, expanding, earn
-                    to knowledge
+                    Now, I Am Learning Many Things, Exploring, Expanding only
+                    gain for Knowledge
                   </p>
                   <div className={classes.socialLink}>
                     <span>
@@ -56,6 +35,7 @@ const Home = () => {
                         to={{
                           pathname: "https://facebook.com/webdeveloperbashar",
                         }}
+                        target="_blank"
                       >
                         {<RiFacebookCircleFill />}
                       </Link>
@@ -66,6 +46,7 @@ const Home = () => {
                           pathname:
                             "https://www.linkedin.com/in/webdeveloperbashar/",
                         }}
+                        target="_blank"
                       >
                         {<RiLinkedinBoxFill />}
                       </Link>
@@ -73,9 +54,9 @@ const Home = () => {
                     <span>
                       <Link
                         to={{
-                          pathname:
-                            "https://github.com/webdeveloperbashar",
+                          pathname: "https://github.com/webdeveloperbashar",
                         }}
+                        target="_blank"
                       >
                         {<RiGithubFill />}
                       </Link>

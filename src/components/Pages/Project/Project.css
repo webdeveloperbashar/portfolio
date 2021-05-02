@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,700;0,900;1,400;1,500&display=swap");
+
+.projectSection {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+}
+.title h1 {
+  color: var(--third-color);
+  margin: 40px 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 60px;
+}
+.project-img img {
+  height: 320px;
+}
